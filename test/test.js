@@ -3,12 +3,12 @@ var driver;
 var homePage;
 var indexPage;
 
-var IndexPage = require('./page-objects/index-page');
-var HomePage = require('./page-objects/home-page');
-var RegisterPage = require('./page-objects/register-page');
-var LoginPage = require('./page-objects/login-page');
-var ProjectPage = require('./page-objects/project-page');
-var NewProjectPage = require('./page-objects/new-project-page');
+var IndexPage = require('./pageObjects/indexPage');
+var HomePage = require('./pageObjects/homePage');
+var RegisterPage = require('./pageObjects/registerPage');
+var LoginPage = require('./pageObjects/loginPage');
+var ProjectPage = require('./pageObjects/projectPage');
+var NewProjectPage = require('./pageObjects/newProjectPage');
 
 const timeOut = 30000;
 
