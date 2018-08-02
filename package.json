@@ -1,0 +1,26 @@
+{
+  "name": "demo-redmine",
+  "version": "1.0.0",
+  "description": "Prova Técnica Softbox - Jefferson Ferreira",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "assert": "^1.4.1",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jefferson3108/demo-redmine.git"
+  },
+  "author": "Jefferson Ferreira <jefferson_ferreira@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jefferson3108/demo-redmine/issues"
+  },
+  "homepage": "https://github.com/jefferson3108/demo-redmine#readme"
+}
