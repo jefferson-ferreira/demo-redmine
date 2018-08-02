@@ -1,5 +1,5 @@
 var page = require('./page');
-var GoogleResultsPage = require('./googleResultsPage');
+var GoogleResultsPage = require('./google-results-page');
 
 function GoogleSearchPage (webdriver) {
   page.call(this, webdriver, 'http://www.google.co.uk/webhp?complete=0');

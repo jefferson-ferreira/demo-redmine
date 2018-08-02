@@ -9,12 +9,13 @@ var RegisterPage = require('./pageObjects/registerPage');
 var LoginPage = require('./pageObjects/loginPage');
 var ProjectPage = require('./pageObjects/projectPage');
 var NewProjectPage = require('./pageObjects/newProjectPage');
+var NewIssuePage = require('./pageObjects/newIssuePage');
 
 const timeOut = 30000;
 
 test.describe('Demo-Redmine', function () {
 
-    var usuario = 'jefferson.ferreira';
+	var usuario = 'jefferson.ferreira';
 	var senha = senha;
     var projeto = 'Prova-Tecnica-Softbox';
     var email = 'jefferson_ferreira@test.com';
@@ -89,6 +90,32 @@ test.describe('Demo-Redmine', function () {
         driver.sleep(1000);
 
         homePage.verificaMsg('Successful creation.');
+
+        done();
+    });
+
+    test.it('Cadastrar issues', function (done) {
+
+        this.timeout(240000);
+
+        homePage = new HomePage(driver);
+        var projectPage = new ProjectPage(driver);
+        var newIssuePage = new NewIssuePage(driver);
+
+        homePage.selecioneProjeto(projeto);
+        projectPage.clickNewIssue();
+
+        var json = require('./files/issues');
+
+        json.issues.forEach(function (issue) {
+            newIssuePage.informeSubject(issue.Subject);
+            newIssuePage.informeDescription(issue.Description);
+            newIssuePage.selecionePriority(issue.Priority);
+            newIssuePage.clickCreateAndContinue();
+            driver.sleep(1000);
+        });
+
+        projectPage.clickIssue();
 
         done();
     });
