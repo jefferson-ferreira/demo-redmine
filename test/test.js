@@ -105,7 +105,7 @@ test.describe('Demo-Redmine', function () {
         homePage.selecioneProjeto(projeto);
         projectPage.clickNewIssue();
 
-        var json = require('./files/issues');
+        var json = require('./arquivos/tarefas');
 
         json.issues.forEach(function (issue) {
             newIssuePage.informeSubject(issue.Subject);
